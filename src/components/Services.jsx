@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { AiFillChrome, AiFillAndroid, AiFillWindows } from "react-icons/ai";
+import { AiFillChrome, AiFillAndroid, AiFillRobot } from "react-icons/ai";
 
 const Services = () => {
   const animations = {
@@ -60,8 +60,8 @@ const Services = () => {
           whileInView={animations.whileInView}
           initial={animations.four}
         >
-          <AiFillWindows />
-          <span>Desktop Development</span>
+          <AiFillRobot />
+          <span>Artificial Intlligence & Machine Learning</span>
         </motion.div>
       </section>
     </div>
