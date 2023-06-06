@@ -6,19 +6,19 @@ import me from "../assets/logo.png"
 
 const Home = ({ ratio }) => {
 
-    const clientCount = useRef(null);
+    // const clientCount = useRef(null);
     const ProjectCount = useRef(null);
 
 
-    const animationClientsCount = () => {
-        animate(0,100,{
-            duration:1,
-            onUpdate:(v) => (clientCount.current.textContent = v.toFixed()),
-        })
-    }
+    // const animationClientsCount = () => {
+    //     animate(0,100,{
+    //         duration:1,
+    //         onUpdate:(v) => (clientCount.current.textContent = v.toFixed()),
+    //     })
+    // }
 
     const animationProjectsCount = () => {
-        animate(0,500,{
+        animate(0,10,{
             duration:1,
             onUpdate:(v) => (ProjectCount.current.textContent = v.toFixed()),
         })
@@ -72,27 +72,17 @@ const Home = ({ ratio }) => {
                     <a href="#work">Projects <BsArrowUpRight /> </a>
                 </div>
 
-                <article>
+                {/* <article>
                     <p>
-                        +
-                        {
-                            ratio < 2 && (
-                                <motion.span whileInView={animationClientsCount} ref={clientCount}></motion.span>
-                            )
-                        }
+                        +<motion.span whileInView={animationClientsCount} ref={clientCount}></motion.span>   
                     </p>
                     <span>Clients Worldwide</span>
-                </article>
+                </article> */}
 
                 <aside>
                 <article>
                     <p>
-                        +
-                        {
-                            ratio < 2 && (
-                                <motion.span ref={ProjectCount} whileInView={animationProjectsCount}></motion.span>
-                            )
-                        }
+                        + <motion.span ref={ProjectCount} whileInView={animationProjectsCount}></motion.span> 
                     </p>
                     <span>Projects Done</span>
                 </article>
